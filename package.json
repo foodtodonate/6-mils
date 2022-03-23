@@ -12,9 +12,12 @@
     "test:func": "mocha test/functional/harness.js",
     "test": "npm run lint && npm run cover:test"
   },
+  "publishConfig": {
+    "registry": "http://nexus1.fdc1.local/repository/npm-hosted"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DPassarelli/6-mils.git"
+    "url": "git+https://github.com/foodtodonate/6-mils.git"
   },
   "keywords": [
     "cxml",
