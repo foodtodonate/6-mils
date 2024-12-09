@@ -1,5 +1,5 @@
 {
-  "name": "6-mils",
+  "name": "@foodtodonate/6-mils",
   "version": "2.8.0",
   "description": "A JS library for sending, receiving, and parsing cXML messages.",
   "main": "main.js",
@@ -8,28 +8,19 @@
     "cover:report": "nyc report --reporter=text-lcov",
     "coverage": "npm run cover:report | coveralls",
     "lint": "standard",
+    "prepare": "npm run login",
+    "login": "aws codeartifact login --tool npm --repository npm --domain foodtodonate --domain-owner 366681657853",
     "test:unit": "mocha \"./{,!(node_modules)/**/}*.spec.js\"",
     "test:func": "mocha test/functional/harness.js",
     "test": "npm run lint && npm run cover:test"
-  },
-  "publishConfig": {
-    "registry": "http://nexus1.fdc1.local/repository/npm-hosted"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/foodtodonate/6-mils.git"
   },
   "keywords": [
     "cxml",
     "xml",
     "commerce"
   ],
-  "author": "David Passarelli <dpassarelli@camelotcg.com>",
+  "author": "Dustin Threet",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DPassarelli/6-mils/issues"
-  },
-  "homepage": "https://github.com/DPassarelli/6-mils#readme",
   "engines": {
     "node": ">=10"
   },
